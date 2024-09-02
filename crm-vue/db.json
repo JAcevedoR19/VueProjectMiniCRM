@@ -1,0 +1,13 @@
+{
+    "clientes" : [
+        {
+            "id": "1",
+            "nombre": "Juan",
+            "apellido": "Perez",
+            "email": "Dn9xg@example.com",
+            "telefono": "123456789",
+            "empresa": "Udemy",
+            "cargo": "Profesor"
+        }
+    ]
+}
