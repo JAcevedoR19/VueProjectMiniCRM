@@ -1,13 +1,14 @@
 {
-    "clientes" : [
-        {
-            "id": "1",
-            "nombre": "Juan",
-            "apellido": "Perez",
-            "email": "Dn9xg@example.com",
-            "telefono": "123456789",
-            "empresa": "Udemy",
-            "cargo": "Profesor"
-        }
-    ]
+  "clientes": [
+    {
+      "id": "0a85",
+      "nombre": "Joan",
+      "apellido": "Acevedo",
+      "email": "jramos@iiconcepcion.edu.ar",
+      "telefono": "1155864610",
+      "empresa": "Udemy",
+      "cargo": "Dueño",
+      "estado": true
+    }
+  ]
 }

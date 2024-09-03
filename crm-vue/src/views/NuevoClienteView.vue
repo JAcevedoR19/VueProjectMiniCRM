@@ -1,7 +1,7 @@
 <script setup>
     import { reactive } from 'vue';
     import { useRouter } from 'vue-router';
-    import axios from '../lib/axios';
+    import ClienteService from '@/services/ClienteService';
     import { FormKit } from '@formkit/vue'
     import RouterLink from '@/components/UI/RouterLink.vue';
     import Heading from '@/components/UI/Heading.vue';
@@ -9,7 +9,8 @@
     const router = useRouter();
 
     const handleSubmit = (data) => {
-        axios.post('/clientes', data)
+        data.estado = 1;
+        ClienteService.addClient(data)
             .then(respuesta => {
                 router.push({ name: 'home' })
             })
@@ -38,7 +39,7 @@
                         validation="required|email" :validation-messages="{ required: 'El email es obligatorio', email: 'Coloca un email válido' }"/>
 
                         <FormKit type="text" name="telefono" label="Teléfono" placeholder="Teléfono: XXX-XXX-XXXX" 
-                        validation="required|*matches:^[0-9]{3}-[0-9]{3}-[0-9]{4}$/" :validation-messages="{ required: 'El email es obligatorio', email: 'Coloca un email válido' }"/>
+                        validation="required*matches:^[0-9]{3}-[0-9]{3}-[0-9]{4}$/" :validation-messages="{ required: 'El teléfono es obligatorio' }"/>
 
                         <FormKit type="text" name="empresa" label="Empresa" placeholder="Empresa donde trabaja"/>
 
